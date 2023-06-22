@@ -95,3 +95,9 @@ format tipe data Date dan Time
 - timestamp : `YYYY-MM-dd HH:mm:ss`
 - Date : `YYYY-MM-dd`
 - Time : `HH:mm:ss`
+
+<h1 id='tipeDataBoolean'>Tipe Data Boolean</h1>
+
+| nama      | ukuran penyimpanan | deskripsi              |
+| --------- | ------------------ | ---------------------- |
+| `boolean` | 1 byte             | state of true or false |
