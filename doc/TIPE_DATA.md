@@ -1,4 +1,4 @@
-<h1 id='tipeDataNumber'> Tipe Data Number</h1>
+<h1 id='tipeDataNumber'>Tipe Data Number</h1>
 
 secara garis besar, tipe data number di PostgreSQL ada dua jenis :
 
@@ -55,3 +55,24 @@ tipe data `smallserial`, `serial`, `bigserial` bukan tipe data yang sebenarnya, 
 | `smallserial` | 2 byte             | small autoincrementing integer | 1 to 32767               |
 | `serial`      | 4 byte             | autoincrementing integer       | 1 to 2147483647          |
 | `bigserial`   | 8 byte             | large autoincrementing integer | 1 to 9223372036854775807 |
+
+<h1 id='tipeDataString'>Tipe Data String</h1>
+
+| nama         | keterangan                        |
+| ------------ | --------------------------------- |
+| `VARCHAR(n)` | panjang variable dengan limit `n` |
+| `CHAR(n)`    | variable dengan panjang tetap     |
+| `TEXT`       | variable dengan panjang unlimited |
+
+maksimum ukuran `VARCHAR` dan `CHAR` adalah 65535 karakter.
+
+perbedaan `CHAR` dan `VARCHAR`
+
+| value     | `CHAR(4)` | penyimpanan yang di perlukan | `VARCHAR(4)` | penyimpanan yang di perlukan |
+| --------- | --------- | ---------------------------- | ------------ | ---------------------------- |
+| ''        | ' '       | 4 byte                       | ''           | 1 byte                       |
+| 'ab'      | 'ab '     | 4 byte                       | 'ab'         | 3 byte                       |
+| 'abcd'    | 'abcd'    | 4 byte                       | 'abcd'       | 5 byte                       |
+| 'abcdefg' | 'abcd'    | 4 byte                       | 'abcd'       | 5 byte                       |
+
+selain `CHAR` dan `VARCHAR`, tipe data string yang lainnya adalah `TEXT`, berbeda dengan `CHAR` dan `VARCHAR` yang bisa di tentukan panjang maksimal nya, `TEXT` tidak memiliki panjang maksimal.
