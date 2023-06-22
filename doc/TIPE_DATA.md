@@ -101,3 +101,9 @@ format tipe data Date dan Time
 | nama      | ukuran penyimpanan | deskripsi              |
 | --------- | ------------------ | ---------------------- |
 | `boolean` | 1 byte             | state of true or false |
+
+<h1>Tipe Data Enum</h1>
+
+saat membuat kolom, kadang ada jenis tipe data string, namun isi datanya sudah fix, misalnya seperti jenis kelamin, kategori, dll.
+Kasus seperti ini bisa menggunakan tipe data `Enum`.
+Tipe data `Enum` harus di buat terlebih dahulu dan di tentukan value yang di perbolehkan.
