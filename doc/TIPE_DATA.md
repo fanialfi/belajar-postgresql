@@ -76,3 +76,22 @@ perbedaan `CHAR` dan `VARCHAR`
 | 'abcdefg' | 'abcd'    | 4 byte                       | 'abcd'       | 5 byte                       |
 
 selain `CHAR` dan `VARCHAR`, tipe data string yang lainnya adalah `TEXT`, berbeda dengan `CHAR` dan `VARCHAR` yang bisa di tentukan panjang maksimal nya, `TEXT` tidak memiliki panjang maksimal.
+
+<h1 id='tipeDataDateDanTime'>Tipe Data Date dan Time</h1>
+
+jenis jenis tipe data `Date` dan `Time`
+
+| nama                                 | ukuran penyimpanan | deskripsi                             | value ter rendah | value ter tinggi | resolusi |
+| ------------------------------------ | ------------------ | ------------------------------------- | ---------------- | ---------------- | -------- |
+| `timestamp [(p)] [withot time zone]` | 8 byte             | Date dan Time, tanpa time zone        | 4713 BC          | 294276 AD        | 1 ms     |
+| `timestamp [(p)] with time zone`     | 8 byte             | Date dan Time, dengan time zone       | 4713 BC          | 294276 AD        | 1 ms     |
+| `date`                               | 4 byte             | date (tidak ada waktu untuk hari)     | 4713 BC          | 5874897 AD       | 1 day    |
+| `time` [(p)] [without time zone]     | 8 byte             | time of day (no date)                 | 00:00:00         | 24:00:00         | 1 ms     |
+| `time [(p)] with time zone           | 12 byte            | time of day (no date), with time zone | 00:00:00+1559    | 24:00:00-1559    | 1ms      |
+| `interval [fields] [p]`              | 16 byte            | time interval                         | -178000000 years | 178000000 years  | 1 ms     |
+
+format tipe data Date dan Time
+
+- timestamp : `YYYY-MM-dd HH:mm:ss`
+- Date : `YYYY-MM-dd`
+- Time : `HH:mm:ss`
