@@ -1,0 +1,1 @@
+digunakan untuk melakukan atau menambahkan pengecekan kondisi, cocok digunakan untuk mengecek data sebelum di masukkan kedalam database, misalnya sebelum memasukkan data kedalam database, kita ingin mengecek quantity product nya harus diatas 0.
